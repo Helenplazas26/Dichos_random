@@ -1,6 +1,11 @@
 package repository
 
-var ListaDichos []string // Esto crea un slice vacío de enteros
+
+
+var ListaDichos []string = []string{"como dice el dicho"}
+
+
+// Esto crea un slice vacío de enteros
 
 func AgregarDicho (dicho string) {
 	ListaDichos = append(ListaDichos,dicho)
@@ -24,4 +29,9 @@ func ListarDichos ()string{
 		dichos+= ListaDichos[i]+"\n"
 	}
 	return dichos
+}
+
+
+func TamanioLista () int  {
+	return  len(ListaDichos)
 }
